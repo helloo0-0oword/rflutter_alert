@@ -24,7 +24,7 @@ class Alert {
   final AlertType? type;
   final AlertStyle style;
   final Widget? image;
-  final String title;
+  final String? title;
   final String? desc;
   final Widget content;
   final List<DialogButton>? buttons;
@@ -43,7 +43,7 @@ class Alert {
     this.type,
     this.style = const AlertStyle(),
     this.image,
-    required this.title,
+    this.title,
     this.desc,
     this.content = const SizedBox(),
     this.buttons,
@@ -115,13 +115,15 @@ class Alert {
                           children: <Widget>[
                             _getImage(),
                             SizedBox(
-                              height: 15,
+                              height: title != '' ? 15 : 0,
                             ),
-                            Text(
-                              title,
-                              style: style.titleStyle,
-                              textAlign: style.titleTextAlign,
-                            ),
+                            title != ''
+                                ? Text(
+                                    title,
+                                    style: style.titleStyle,
+                                    textAlign: style.titleTextAlign,
+                                  )
+                                : Container(),
                             SizedBox(
                               height: desc == null ? 5 : 10,
                             ),
