@@ -117,13 +117,13 @@ class Alert {
                             SizedBox(
                               height: title != '' ? 15 : 0,
                             ),
-                            title != ''
-                                ? Text(
-                                    title as String,
-                                    style: style.titleStyle,
-                                    textAlign: style.titleTextAlign,
-                                  )
-                                : Container(),
+                            // title != ''
+                            //     ? Text(
+                            //         title as String,
+                            //         style: style.titleStyle,
+                            //         textAlign: style.titleTextAlign,
+                            //       )
+                            //     : Container(),
                             SizedBox(
                               height: desc == null ? 5 : 10,
                             ),
