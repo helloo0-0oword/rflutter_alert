@@ -119,7 +119,7 @@ class Alert {
                             ),
                             title != ''
                                 ? Text(
-                                    title,
+                                    title as String,
                                     style: style.titleStyle,
                                     textAlign: style.titleTextAlign,
                                   )
