@@ -103,20 +103,17 @@ class Alert {
               elevation: style.alertElevation,
               titlePadding: const EdgeInsets.all(0.0),
               title: Container(
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      _getCloseButton(),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            20, (style.isCloseButton ? 0 : 10), 20, 0),
-                        child: Container(
-                          child: content,
-                        ),
-                      )
-                    ],
-                  ),
+                child: Column(
+                  children: <Widget>[
+                    _getCloseButton(),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(
+                          20, (style.isCloseButton ? 0 : 10), 20, 0),
+                      child: Container(
+                        child: content,
+                      ),
+                    )
+                  ],
                 ),
               ),
               contentPadding: style.buttonAreaPadding,
