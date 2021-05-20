@@ -111,31 +111,8 @@ class Alert {
                       Padding(
                         padding: EdgeInsets.fromLTRB(
                             20, (style.isCloseButton ? 0 : 10), 20, 0),
-                        child: Column(
-                          children: <Widget>[
-                            _getImage(),
-                            SizedBox(
-                              height: title != '' ? 15 : 0,
-                            ),
-                            // title != ''
-                            //     ? Text(
-                            //         title as String,
-                            //         style: style.titleStyle,
-                            //         textAlign: style.titleTextAlign,
-                            //       )
-                            //     : Container(),
-                            SizedBox(
-                              height: desc == null ? 5 : 10,
-                            ),
-                            desc == null
-                                ? Container()
-                                : Text(
-                                    desc!,
-                                    style: style.descStyle,
-                                    textAlign: style.descTextAlign,
-                                  ),
-                            content,
-                          ],
+                        child: Container(
+                          child: content,
                         ),
                       )
                     ],
